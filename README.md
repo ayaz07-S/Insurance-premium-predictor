@@ -65,17 +65,25 @@ streamlit run frontend.py
 ```
 This will open the Streamlit web application in your default web browser (usually at `http://localhost:8501`), where you can interact with the predictor.
 
-## Docker Deployment (Optional)
+## Docker Deployment
 
-You can also use the provided `Dockerfile` to build and run the application in an isolated container environment. 
+You can run the application in an isolated container environment using Docker. A pre-built image is available on Docker Hub, or you can build it locally.
 
-To build the image:
+### Option 1: Pull from Docker Hub
+
+The Docker image for this application is published on Docker Hub: [mohdayazs/insurance-premium-api](https://hub.docker.com/r/mohdayazs/insurance-premium-api). You can pull and run it directly without needing to build it yourself:
+
 ```bash
-docker build -t insurance-premium-predictor .
+docker pull mohdayazs/insurance-premium-api
+docker run -p 8000:8000 -p 8501:8501 mohdayazs/insurance-premium-api
 ```
 
-To run the container:
+### Option 2: Build Locally
+
+If you prefer to build the image locally from the provided `Dockerfile`:
+
 ```bash
+docker build -t insurance-premium-predictor .
 docker run -p 8000:8000 -p 8501:8501 insurance-premium-predictor
 ```
 *(Adjust the ports based on your Dockerfile configuration)*
