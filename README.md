@@ -2,6 +2,11 @@
 
 This project is a Machine Learning application that predicts the health insurance premium category based on various patient details. It consists of a **FastAPI** backend for serving the machine learning model and a **Streamlit** frontend for an interactive user interface.
 
+## Live Demo
+
+- **Streamlit Frontend (User Interface):** [https://insurance-premium-predictor-feyv5dg7s4yylgzl86jr8h.streamlit.app/](https://insurance-premium-predictor-feyv5dg7s4yylgzl86jr8h.streamlit.app/)
+- **FastAPI Backend (Swagger UI):** [https://insurance-premium-predictor-p5kl.onrender.com/docs](https://insurance-premium-predictor-p5kl.onrender.com/docs)
+
 ## Project Structure
 
 ```
