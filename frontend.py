@@ -32,6 +32,9 @@ if st.button("Predict Premium"):
         if response.status_code == 200:
             result = response.json()
             st.success(f"Predicted Health Insurance Premium Category: **{result['predicted_category']}**")
+            st.write(f"**Confidence:** {result['confidence']}")
+            st.write("**Class Probabilities:**")
+            st.json(result['class_probabilities'])
         else:
             st.error(f"{response.status_code} - {response.text}")
 
