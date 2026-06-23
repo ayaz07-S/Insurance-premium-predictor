@@ -1,7 +1,7 @@
 import streamlit as st
 import requests
 
-API_URL = "https://insurance-premium-predictor-p5kl.onrender.com"
+API_URL = "https://insurance-premium-predictor-p5kl.onrender.com/predict"
 
 st.title("Health Insurance Premium Prediction")
 
@@ -31,7 +31,7 @@ if st.button("Predict Premium"):
         
         if response.status_code == 200:
             result = response.json()
-            st.success(f"Predicted Health Insurance Premium Category: **{result['prediction']}**")
+            st.success(f"Predicted Health Insurance Premium Category: **{result['predicted_category']}**")
         else:
             st.error(f"{response.status_code} - {response.text}")
 
